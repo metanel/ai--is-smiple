@@ -29,15 +29,6 @@ export default function Hero() {
           <span className="text-green">לעולם החדש</span>
         </motion.h1>
 
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed"
-        >
-          גלו כיצד בינה מלאכותית יכולה לייעל את העסק שלכם, לחסוך זמן ולשפר תוצאות - בלי צורך בידע טכני מוקדם. העתיד כבר כאן, והוא פשוט מאי פעם.
-        </motion.p>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
