@@ -16,9 +16,9 @@ export default function Hero() {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy to-green-dark opacity-80" />
       <div className="absolute inset-0 star-bg animate-twinkle opacity-40" />
-      
+
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto pt-20">
+      <div className="relative z-10 max-w-4xl mx-auto">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
