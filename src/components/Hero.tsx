@@ -3,10 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const scale = useTransform(scrollY, [0, 300], [1, 0.95]);
+  const y = useTransform(scrollY, [0, 300], [0, 50]);
+
   return (
     <section 
       id="home"
@@ -17,11 +22,11 @@ export default function Hero() {
       <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
         <source src={`${import.meta.env.BASE_URL}earth.mp4`} type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/50 to-green-dark/90" />
+      <div className="absolute inset-0 bg-black/60" />
       
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <motion.h1 
+      <motion.div style={{ opacity, scale, y }} className="relative z-10 max-w-4xl mx-auto">
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -47,15 +52,14 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <motion.div 
+        style={{ opacity }}
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/50"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/70"
       >
+        <span className="text-sm font-medium mb-2 tracking-widest">גללו למטה</span>
         <ChevronDown size={32} />
       </motion.div>
-
-      {/* Bottom Interface */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream to-transparent" />
     </section>
   );
 }
