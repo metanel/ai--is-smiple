@@ -11,6 +11,7 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 0.95]);
   const y = useTransform(scrollY, [0, 300], [0, 50]);
+  const washOpacity = useTransform(scrollY, [50, 400], [0, 1]);
 
   return (
     <section 
@@ -22,7 +23,11 @@ export default function Hero() {
       <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
         <source src={`${import.meta.env.BASE_URL}earth.mp4`} type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/30" />
+      <motion.div 
+        style={{ opacity: washOpacity }} 
+        className="absolute inset-0 bg-gradient-to-b from-white/90 via-cream to-cream z-0 pointer-events-none" 
+      />
       
       {/* Content */}
       <motion.div style={{ opacity, scale, y }} className="relative z-10 max-w-4xl mx-auto">
