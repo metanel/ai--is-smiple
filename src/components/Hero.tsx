@@ -14,9 +14,11 @@ export default function Hero() {
       dir="rtl"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy to-green-dark opacity-80" />
-      <div className="absolute inset-0 star-bg animate-twinkle opacity-40" />
-
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+        <source src="/earth.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/50 to-green-dark/90" />
+      
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <motion.h1 
