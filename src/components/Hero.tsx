@@ -15,7 +15,7 @@ export default function Hero() {
     >
       {/* Background Effects */}
       <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-        <source src="/earth.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}earth.mp4`} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/50 to-green-dark/90" />
       
