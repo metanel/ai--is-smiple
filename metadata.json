@@ -1,6 +1,0 @@
-{
-  "name": "בינה מלאכותית זה פשוט",
-  "description": "אפליקציית שיווק באמצעות בינה מלאכותית - פשוט, מהיר ואנושי",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
