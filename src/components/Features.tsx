@@ -32,18 +32,6 @@ export default function Features() {
   return (
     <section className="py-24 px-6 bg-cream" dir="rtl">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-navy mb-4 leading-tight"
-          >
-            לייצר לקוחות בעידן הבינה המלאכותית מעולם לא היה <br />
-            <span className="marker-highlight">פשוט יותר</span>.
-          </motion.h2>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
