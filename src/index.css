@@ -54,6 +54,9 @@
 }
 
 @layer base {
+  html, body {
+    overflow-x: hidden;
+  }
   body {
     @apply bg-cream text-navy antialiased selection:bg-marker/30;
     font-feature-settings: "ss01", "ss02";
