@@ -21,7 +21,6 @@ export default function Hero() {
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src={`${import.meta.env.BASE_URL}earth.mp4`} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/30" />
         
         {/* שכבת האור - מתחילה שקופה והופכת לאור לבן-שמנת שמכסה הכל */}
         <motion.div 
