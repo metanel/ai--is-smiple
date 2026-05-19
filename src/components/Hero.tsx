@@ -45,7 +45,7 @@ export default function Hero() {
             התחילו את המסע
           </button>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Decorative Glow */}
       <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[800px] h-[800px] bg-green opacity-20 rounded-full blur-[120px]" />
