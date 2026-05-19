@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-/
+
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
