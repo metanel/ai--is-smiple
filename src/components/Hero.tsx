@@ -25,8 +25,8 @@ export default function Hero() {
   const creamWashOpacity = useTransform(scrollY, [1700, 2100], [0, 1]);
 
   return (
-    // הגדלנו את הגובה ל-300vh כדי שיהיה מספיק "זמן גלילה" לכל השלבים
-    <section id="home" className="relative h-[300vh] bg-cream">
+    // הגדלנו את הגובה ל-400vh כדי להבטיח מעבר חלק של כל השלבים גם במובייל
+    <section id="home" className="relative h-[400vh] bg-cream">
       <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center text-center px-6 overflow-hidden">
         
         {/* Background Video */}
