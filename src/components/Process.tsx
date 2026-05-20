@@ -41,7 +41,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="curriculum" className="py-24 px-6 bg-cream" dir="rtl">
+    <section id="curriculum" className="py-24 px-6 bg-cream">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <motion.h2 
