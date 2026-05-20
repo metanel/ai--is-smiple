@@ -43,7 +43,7 @@ export default function Hero() {
         {/* שכבת שטיפת צבע הקרם של האתר */}
         <motion.div 
           style={{ opacity: creamWashOpacity }} 
-          className="absolute inset-0 bg-cream z-11" 
+          className="absolute inset-0 bg-cream z-[11]" 
         />
         
         {/* תוכן מסך הפתיחה - שלב 1 */}
@@ -75,8 +75,8 @@ export default function Hero() {
         <motion.div style={{ opacity: nextTextOpacity, y: nextTextY }} className="absolute inset-0 flex flex-col justify-center items-center z-30 pointer-events-none">
           <div className="max-w-4xl mx-auto w-full px-6">
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4 leading-tight">
-              לייצר לקוחות בעידן הבינה המלאכותית מעולם לא היה <br />
-              <span className="marker-highlight">פשוט יותר</span>.
+              לייצר לקוחות בעידן הבינה המלאכותית <br />
+              <span className="marker-highlight">זה פשוט</span>.
             </h2>
           </div>
         </motion.div>
