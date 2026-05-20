@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     // הגדלנו את הגובה ל-300vh כדי שיהיה מספיק "זמן גלילה" לכל השלבים
-    <section id="home" className="relative h-[300vh] bg-cream" dir="rtl">
+    <section id="home" className="relative h-[300vh] bg-cream">
       <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center text-center px-6 overflow-hidden">
         
         {/* Background Video */}
