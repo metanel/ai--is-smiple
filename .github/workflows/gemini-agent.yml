@@ -1,4 +1,5 @@
 name: Gemini CLI Agent
+
 on:
   issue_comment:
     types: [created]
@@ -16,11 +17,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Run Gemini CLI Action
-      uses: google-github-actions/run-gemini-cli@v0.1.3
-      with:
-        prompt: 'Please read the current issue and update the code accordingly.'
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: google-github-actions/run-gemini-cli@v0.1.3
+        with:
+          prompt: 'Please read the current issue and update the code accordingly.'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
