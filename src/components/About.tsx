@@ -19,7 +19,7 @@ export default function About() {
         >
           <div className="absolute inset-0 bg-green/10 rounded-[40px] transform rotate-3" />
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVYG3235LoFrt-ku6LHTzvaCz-TMa47DgOrG9yPwMw8vwthZ9994i0GlrxSfxa8SAkTVEG4vmtV_u2uIMLZGbDqvs8iDjm-9a55X2IBUmXEDPRxMEuGrUHOSEvP9Qok09a7MPbwx9yhRKW71rcqktpZ-GW9TBEFR5HZrsmQxXZBW_a9HbuprRSBvhXwwL6ofbPFQSmxrVhKQG67u39bWtzSSX5l3K3esOOnUCIbccdFcX16GqCMn9K9jmCZ6odvPx_kbwK_ZPnEtJe" 
+            src={`${import.meta.env.BASE_URL}unnamed.png`} 
             alt="מתנאל - מומחה לבינה מלאכותית" 
             className="relative z-10 w-full h-auto aspect-[4/5] object-cover rounded-[32px] shadow-2xl"
           />
