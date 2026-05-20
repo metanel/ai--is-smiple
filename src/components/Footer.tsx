@@ -5,7 +5,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white py-16 px-6 border-t border-white/5" dir="rtl">
+    <footer className="bg-navy text-white py-16 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="text-center md:text-right">
