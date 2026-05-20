@@ -32,7 +32,6 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-cream/80 backdrop-blur-xl shadow-sm py-4 opacity-100' : 'bg-transparent py-6 opacity-0 pointer-events-none'
       }`}
-      dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-8">
