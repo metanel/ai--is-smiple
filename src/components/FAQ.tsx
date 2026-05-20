@@ -30,7 +30,7 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 px-6 bg-surface-container-low" dir="rtl">
+    <section id="faq" className="py-24 px-6 bg-surface-container-low">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-navy text-center mb-16">
           שאלות <span className="marker-highlight">נפוצות</span>
