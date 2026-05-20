@@ -8,7 +8,7 @@ import { Target, Lightbulb, Users } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-cream-alt" dir="rtl">
+    <section id="about" className="py-24 px-6 bg-cream-alt">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
         {/* Left/Top: Image */}
         <motion.div 
