@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center text-center px-6 overflow-hidden">
         
         {/* Background Video */}
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+        <video autoPlay loop muted playsInline aria-hidden="true" className="absolute inset-0 w-full h-full object-cover">
           <source src={`${import.meta.env.BASE_URL}earth.mp4`} type="video/mp4" />
         </video>
         
