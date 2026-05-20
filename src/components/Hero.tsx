@@ -1,32 +1,39 @@
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
-  const { scrollY } = useScroll();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
   
   const startJourney = () => {
-    window.scrollTo({
-      top: window.innerHeight * 2.3,
-      behavior: 'smooth'
-    });
+    if (containerRef.current) {
+      window.scrollTo({
+        top: containerRef.current.offsetHeight - window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
   };
   
-  // שלב 1: מסך פתיחה (Welcome) - המילים, הכפתור והחץ נעלמים בגלילה ראשונית
-  const textOpacity = useTransform(scrollY, [200, 600], [1, 0]);
-  const textScale = useTransform(scrollY, [200, 600], [1, 0.9]);
-  const arrowOpacity = useTransform(scrollY, [200, 500], [1, 0]);
+  // שלב 1: מסך פתיחה (Welcome) - המילים והכפתור מתפוגגים ב-20% הראשונים של הגלילה
+  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const textScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.9]);
+  const arrowOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   
-  // שלב 2 + שלב 3: הופעת הכותרת השנייה (Welcome.2) והישארותה סטטית במהלך ה-Fade to White
-  const nextTextOpacity = useTransform(scrollY, [500, 800, 2100, 2400], [0, 1, 1, 0]);
-  const nextTextY = useTransform(scrollY, [500, 800], [30, 0]);
+  // שלב 2 + 3: הכותרת השנייה מופיעה ב-25% ונשארת יציבה במהלך ה-Fade ללבן ולקרם
+  const nextTextOpacity = useTransform(scrollYProgress, [0.2, 0.3, 0.85, 0.95], [0, 1, 1, 0]);
+  const nextTextY = useTransform(scrollYProgress, [0.2, 0.3], [30, 0]);
   
-  // שלב 3: אפקט המעבר (The Web) - הפיכה ללבן מוחלט, ואז מעבר לצבע הקרם של האתר
-  const whiteWashOpacity = useTransform(scrollY, [1100, 1500], [0, 1]);
-  const creamWashOpacity = useTransform(scrollY, [1700, 2100], [0, 1]);
+  // שלב 3: אפקט המעבר (The Web) - שינוי הדרגתי ללבן מוחלט ואז לצבע הקרם של האתר
+  const whiteWashOpacity = useTransform(scrollYProgress, [0.4, 0.65], [0, 1]);
+  const creamWashOpacity = useTransform(scrollYProgress, [0.65, 0.9], [0, 1]);
 
   return (
-    // הגדלנו את הגובה ל-400vh כדי להבטיח מעבר חלק של כל השלבים גם במובייל
-    <section id="home" className="relative h-[400vh] bg-cream">
+    // הגדלנו את הגובה ל-300vh ומעבירים אחוזים יחסיים למניעת שטחים מתים
+    <section id="home" ref={containerRef} className="relative h-[300vh] bg-cream">
       <div className="sticky top-0 h-screen w-full flex flex-col justify-center items-center text-center px-6 overflow-hidden">
         
         {/* Background Video */}
